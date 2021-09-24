@@ -1,0 +1,53 @@
+/*CSS Reset*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* max-width:100%; */
+  /*put a border around everything to see where it stops and starts*/
+    /* border:1px solid grey; */
+}
+
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+#firstHalf img, #secondHalf img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#firstHalf, #secondHalf{
+    flex-basis: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#firstHalf button, #secondHalf button{
+    position: absolute;
+    color: white;
+    background-color: midnightblue;
+    border-radius: 6px;
+    height: 75px;
+    width: 300px;
+    margin-top: 50%;
+    font-size: 2rem;
+    outline: none;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+}
+
+#firstHalf button:hover, #secondHalf button:hover{
+    box-shadow: inset 300px 0 0 0 #f9e506;
+}
+
+@media(max-width: 630px){
+    body{
+        flex-direction: column;
+    }
+}
